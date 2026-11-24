@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>من نحن | موسيقاتي MOSIQATI</title>
+  <meta name="description" content="تعرف على قصة موسيقاتي ورؤيته وقيمه في خدمة عشاق الموسيقى بالأردن.">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="../Image/Screenshot 2026-02-21 2.33.18 PM - Copy.png">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">الانتقال للمحتوى الرئيسي</a>
+
+  <!-- ══ مودال تسجيل الدخول ══ -->
+  <div id="login-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-label="تسجيل الدخول">
+    <div class="modal-box">
+      <button class="modal-close" onclick="closeLogin()" aria-label="إغلاق">✕</button>
+      <h2>🔐 تسجيل الدخول</h2>
+      <form id="login-form" autocomplete="on" novalidate>
+        <label for="login-user">اسم المستخدم أو البريد الإلكتروني</label>
+        <input id="login-user" type="text" placeholder="أدخل اسم المستخدم" autocomplete="username" required>
+        <label for="login-pass">كلمة المرور</label>
+        <input id="login-pass" type="password" placeholder="أدخل كلمة المرور" autocomplete="current-password" required>
+        <div id="login-error" class="error-msg">يرجى إدخال اسم المستخدم وكلمة المرور.</div>
+        <button class="btn btn-primary" type="submit" style="width:100%">دخول</button>
+      </form>
+    </div>
+  </div>
+
+  <header class="topbar">
+    <div class="container navbar">
+      <a class="brand" href="index.html" aria-label="العودة للصفحة الرئيسية">
+          <img src="../Image/Screenshot 2026-02-21 2.33.18 PM.png" alt="هنا كانت صوره الشعار الخاص بالموقع" width=" 100" >
+        <span>
+          MOSIQATI
+          <small>موسيقاتي — حيث تبدأ رحلتك الموسيقية</small>
+        </span>
+      </a>
+
+      <nav aria-label="القائمة الرئيسية">
+        <ul class="nav-links">
+          <li><a class="" href="index.html">الرئيسية</a></li>
+          <li><a class="" href="products.html">المنتجات</a></li>
+          <li><a class="" href="services.html">الخدمات</a></li>
+          <li><a class="active" href="about.html">من نحن</a></li>
+          <li><a class="" href="contact.html">تواصل معنا</a></li>
+        </ul>
+      </nav>
+
+      <div class="navbar-actions" style="display:flex;align-items:center;gap:.75rem;flex-shrink:0">
+        <div class="search-wrap">
+          <span class="search-icon" aria-hidden="true">🔍</span>
+          <input id="global-search" type="search" placeholder="ابحث..." autocomplete="off" aria-label="بحث في الموقع">
+          <div id="search-results" role="listbox" aria-label="نتائج البحث"></div>
+        </div>
+        <button class="btn-login" onclick="openLogin()" aria-label="تسجيل الدخول">🔑 دخول</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <section class="container">
+      <div class="section-head" id="top">
+        <div>
+          <h2>من نحن</h2>
+          <p>
+            نحكي لك هنا قصة موسيقاتي — من أين بدأنا، وإلى أين نسعى، ولماذا اخترنا هذه الهوية الرقمية الجديدة.
+          </p>
+        </div>
+      </div>
+
+      <div class="grid grid-2">
+        <article class="card">
+          <h3>قصة البداية</h3>
+          <p>
+            موسيقاتي متجر أردني متخصص في الآلات الموسيقية ومعدات الاستوديو، أُسِّس بهدف تلبية احتياجات
+            محبي الموسيقى على اختلاف مستوياتهم — من الطالب المبتدئ الباحث عن أول آلة، إلى المحترف الذي يبني استوديوه الخاص.
+          </p>
+          <p>
+            فكرة الموقع الجديد نابعة من رغبة حقيقية في تقديم تجربة تسوق أكثر تنظيماً وعصرية،
+            تُبرز قوة الخدمة وعمق خبرة الفريق — لا مجرد عرض منتجات وأسعار.
+          </p>
+        </article>
+
+        <article class="card">
+          <h3>رؤيتنا المستقبلية</h3>
+          <p>
+            نسعى لأن يكون موسيقاتي مرجعاً موثوقاً للموسيقيين الأردنيين — مساحة قريبة من المبدعين
+            تدعمهم في كل خطوة من رحلتهم الموسيقية.
+          </p>
+          <ul class="list-check">
+            <li>واجهة رقمية حديثة وسهلة الاستخدام</li>
+            <li>خطاب تسويقي صادق ويلامس جمهوره</li>
+            <li>أولوية للمجتمع والخدمة قبل عملية البيع</li>
+          </ul>
+        </article>
+
+        <img src="../Image/Screenshot 2026-02-21 2.39.41 PM.png"
+             alt="صورة توضح فريق عمل موسيقاتي وهويتهم"
+             height="100" loading="lazy">
+      </div>
+
+      <div class="section-head" style="margin-top:2rem">
+        <div>
+          <h2>قيمنا الأساسية</h2>
+          <p>المبادئ التي تُشكّل هويتنا وتوجّه كل قرار نتخذه في خدمة عملائنا.</p>
+        </div>
+      </div>
+
+      <div class="grid grid-3">
+        <article class="card">
+          <div class="icon-dot">1</div>
+          <h3>الأصالة والجودة العالية</h3>
+          <p>يلتزم المتجر بتوفير آلات موسيقية أصلية 100% من علامات تجارية عالمية كبرى لضمان موثوقية الأداء للموسيقيين.</p>
+        </article>
+        <article class="card">
+          <div class="icon-dot">2</div>
+          <h3>القيمة مقابل المال</h3>
+          <p>تركز استراتيجية العلامة على تقديم أفضل الأسعار التنافسية في السوق الأردني، مما يجعل اقتناء الآلات الموسيقية متاحاً لمختلف الفئات.</p>
+        </article>
+
+        <article class="card">
+          <div class="icon-dot">3</div>
+          <h3>القرب من الجيل الجديد</h3>
+          <p>لغة مباشرة، أسلوب عصري، وتصميم ذكي يصل إليك بسرعة على هاتفك أو حاسوبك.</p>
+        </article>
+        <article class="card">
+          <div class="icon-dot">4</div>
+          <h3>الثقة</h3>
+          <p>خدمة شفافة، معلومات دقيقة، واحترافية في التعامل تجعلك تثق بنا قبل الشراء وبعده.</p>
+        </article>
+      </div>
+
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <section>
+        <h3>MOSIQATI | موسيقاتي</h3>
+        <p>
+          متجرك الأردني المتخصص في الآلات الموسيقية ومعدات الاستوديو،
+          مدعوماً بخدمات توصيل وصيانة واستشارات فنية، بهوية عصرية تناسب طموحك الموسيقي.
+        </p>
+        <div class="social-links">
+          <a class="social-link" href="https://www.instagram.com" target="_blank" rel="noopener" aria-label="انستجرام موسيقاتي">📸 انستجرام</a>
+          <a class="social-link" href="https://www.facebook.com" target="_blank" rel="noopener" aria-label="فيسبوك موسيقاتي">📘 فيسبوك</a>
+          <a class="social-link" href="https://www.tiktok.com" target="_blank" rel="noopener" aria-label="تيك توك موسيقاتي">🎵 تيك توك</a>
+          <a class="social-link" href="https://www.youtube.com" target="_blank" rel="noopener" aria-label="يوتيوب موسيقاتي">▶️ يوتيوب</a>
+        </div>
+      </section>
+
+      <section>
+        <h4>روابط مهمة</h4>
+        <ul class="list-check">
+          <li><a href="products.html">استعرض المنتجات</a></li>
+          <li><a href="services.html">خدماتنا</a></li>
+          <li><a href="about.html">قصتنا وهويتنا</a></li>
+          <li><a href="contact.html">راسلنا الآن</a></li>
+        </ul>
+      </section>
+
+      <section>
+        <h4>معلومات التواصل</h4>
+        <p>التوصيل لجميع محافظات الأردن</p>
+        <p>نموذج أولي قابل للتطوير في VS Code</p>
+        <p><a href="#top">العودة للأعلى ↑</a></p>
+      </section>
+      <img src="../Image/Screenshot 2026-02-21 2.33.18 PM.png" alt="شعار متجر موسيقاتي للآلات الموسيقية" width="200" loading="lazy">
+    </div>
+  </footer>
+
+  <script src="enhancements.js"></script>
+</body>
+</html>

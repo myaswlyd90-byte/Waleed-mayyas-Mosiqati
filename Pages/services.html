@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>الخدمات | موسيقاتي MOSIQATI</title>
+  <meta name="description" content="خدمات موسيقاتي — توصيل، صيانة، استشارات فنية لجميع محافظات الأردن.">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="../Image/Screenshot 2026-02-21 2.33.18 PM - Copy.png">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">الانتقال للمحتوى الرئيسي</a>
+
+  <!-- ══ مودال تسجيل الدخول ══ -->
+  <div id="login-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-label="تسجيل الدخول">
+    <div class="modal-box">
+      <button class="modal-close" onclick="closeLogin()" aria-label="إغلاق">✕</button>
+      <h2>🔐 تسجيل الدخول</h2>
+      <form id="login-form" autocomplete="on" novalidate>
+        <label for="login-user">اسم المستخدم أو البريد الإلكتروني</label>
+        <input id="login-user" type="text" placeholder="أدخل اسم المستخدم" autocomplete="username" required>
+        <label for="login-pass">كلمة المرور</label>
+        <input id="login-pass" type="password" placeholder="أدخل كلمة المرور" autocomplete="current-password" required>
+        <div id="login-error" class="error-msg">يرجى إدخال اسم المستخدم وكلمة المرور.</div>
+        <button class="btn btn-primary" type="submit" style="width:100%">دخول</button>
+      </form>
+    </div>
+  </div>
+
+  <header class="topbar">
+    <div class="container navbar">
+      <a class="brand" href="index.html" aria-label="العودة للصفحة الرئيسية">
+        <img src="../Image/Screenshot 2026-02-21 2.33.18 PM.png" alt="هنا كانت صوره الشعار الخاص بالموقع" width=" 60" >
+        <span>
+          MOSIQATI
+          <small>موسيقاتي — حيث تبدأ رحلتك الموسيقية</small>
+        </span>
+      </a>
+
+      <nav aria-label="القائمة الرئيسية">
+        <ul class="nav-links">
+          <li><a class="" href="index.html">الرئيسية</a></li>
+          <li><a class="" href="products.html">المنتجات</a></li>
+          <li><a class="active" href="services.html">الخدمات</a></li>
+          <li><a class="" href="about.html">من نحن</a></li>
+          <li><a class="" href="contact.html">تواصل معنا</a></li>
+        </ul>
+      </nav>
+
+      <div class="navbar-actions" style="display:flex;align-items:center;gap:.75rem;flex-shrink:0">
+        <div class="search-wrap">
+          <span class="search-icon" aria-hidden="true">🔍</span>
+          <input id="global-search" type="search" placeholder="ابحث..." autocomplete="off" aria-label="بحث في الموقع">
+          <div id="search-results" role="listbox" aria-label="نتائج البحث"></div>
+        </div>
+        <button class="btn-login" onclick="openLogin()" aria-label="تسجيل الدخول">🔑 دخول</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <section class="container">
+      <div class="section-head" id="top">
+        <div>
+          <h2>خدماتنا</h2>
+          <p>
+            نؤمن بأن دورنا لا ينتهي عند البيع — نرافقك قبل الشراء وبعده بخدمات متكاملة تضمن تجربة موسيقية ممتعة.
+          </p>
+        </div>
+      </div>
+
+      <div class="grid grid-3">
+        <article class="card">
+          <div class="icon-dot">🚚</div>
+          <h3>توصيل آمن لكل الأردن</h3>
+          <p>نشحن آلاتك ومعداتك بتغليف احترافي يضمن وصولها سليمة إلى باب بيتك في أي محافظة.</p>
+        </article>
+
+        <article class="card">
+          <div class="icon-dot">🛠</div>
+          <h3>صيانة وضبط الآلات</h3>
+          <p>فحص دوري، تغيير أوتار، تنظيف وصيانة شاملة لجميع أنواع الآلات ومعدات التسجيل.</p>
+        </article>
+
+        <article class="card">
+          <div class="icon-dot">🎛</div>
+          <h3>استشارات فنية متخصصة</h3>
+          <p>نساعدك في اختيار الآلة المثالية أو تصميم استوديو منزلي يناسب ميزانيتك واحتياجاتك الفعلية.</p>
+        </article>
+      </div>
+
+      <div class="section-head" style="margin-top:2rem">
+        <div>
+          <h2>كيف تسير عملية الخدمة؟</h2>
+          <p>أربع خطوات بسيطة تفصل بينك وبين الحصول على ما تحتاجه بكل راحة واطمئنان.</p>
+        </div>
+      </div>
+
+      <div class="timeline">
+        <article class="step">
+          <div class="step-number">1</div>
+          <div>
+            <h3>حدّد احتياجك</h3>
+            <p>أخبرنا بنوع الآلة التي تبحث عنها، المشكلة الفنية التي تواجهها، أو هدفك من إنشاء الاستوديو.</p>
+          </div>
+        </article>
+
+        <article class="step">
+          <div class="step-number">2</div>
+          <div>
+            <h3>نقترح الحل الأمثل</h3>
+            <p>يعرض عليك فريقنا الخيارات الأنسب من منتجات أو خدمات صيانة أو توجيهات فنية مخصصة.</p>
+          </div>
+        </article>
+
+        <article class="step">
+          <div class="step-number">3</div>
+          <div>
+            <h3>التجهيز والتسليم</h3>
+            <p>نجهّز طلبك أو نُنجز الصيانة المطلوبة، ونحدد معك موعد التسليم أو الاستلام الأنسب.</p>
+          </div>
+        </article>
+
+        <article class="step">
+          <div class="step-number">4</div>
+          <div>
+            <h3>متابعة ما بعد الخدمة</h3>
+            <p>نبقى معك بعد الانتهاء لتقديم الدعم والنصائح اللازمة للحفاظ على أداء آلتك أو معداتك.</p>
+          </div>
+        </article>
+      </div>
+
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <section>
+        <h3>MOSIQATI | موسيقاتي</h3>
+        <p>
+          متجرك الأردني المتخصص في الآلات الموسيقية ومعدات الاستوديو،
+          مدعوماً بخدمات توصيل وصيانة واستشارات فنية، بهوية عصرية تناسب طموحك الموسيقي.
+        </p>
+        <div class="social-links">
+          <a class="social-link" href="https://www.instagram.com" target="_blank" rel="noopener" aria-label="انستجرام موسيقاتي">📸 انستجرام</a>
+          <a class="social-link" href="https://www.facebook.com" target="_blank" rel="noopener" aria-label="فيسبوك موسيقاتي">📘 فيسبوك</a>
+          <a class="social-link" href="https://www.tiktok.com" target="_blank" rel="noopener" aria-label="تيك توك موسيقاتي">🎵 تيك توك</a>
+          <a class="social-link" href="https://www.youtube.com" target="_blank" rel="noopener" aria-label="يوتيوب موسيقاتي">▶️ يوتيوب</a>
+        </div>
+      </section>
+
+      <section>
+        <h4>روابط مهمة</h4>
+        <ul class="list-check">
+          <li><a href="products.html">استعرض المنتجات</a></li>
+          <li><a href="services.html">خدماتنا</a></li>
+          <li><a href="about.html">قصتنا وهويتنا</a></li>
+          <li><a href="contact.html">راسلنا الآن</a></li>
+        </ul>
+      </section>
+
+      <section>
+        <h4>معلومات التواصل</h4>
+        <p>التوصيل لجميع محافظات الأردن</p>
+        <p>نموذج أولي قابل للتطوير في VS Code</p>
+        <p><a href="#top">العودة للأعلى ↑</a></p>
+      </section>
+      <img src="../Image/Screenshot 2026-02-21 2.33.18 PM.png" alt="شعار متجر موسيقاتي للآلات الموسيقية" width="200" loading="lazy">
+    </div>
+  </footer>
+
+  <script src="enhancements.js"></script>
+</body>
+</html>
