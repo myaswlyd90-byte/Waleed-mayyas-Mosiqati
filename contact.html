@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>تواصل معنا | موسيقاتي MOSIQATI</title>
+  <meta name="description" content="راسلنا في موسيقاتي — نموذج تواصل، ساعات العمل، وخريطة الموقع.">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="../Image/Screenshot 2026-02-21 2.33.18 PM - Copy.png">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">الانتقال للمحتوى الرئيسي</a>
+
+  <!-- ══ مودال تسجيل الدخول ══ -->
+  <div id="login-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-label="تسجيل الدخول">
+    <div class="modal-box">
+      <button class="modal-close" onclick="closeLogin()" aria-label="إغلاق">✕</button>
+      <h2>🔐 تسجيل الدخول</h2>
+      <form id="login-form" autocomplete="on" novalidate>
+        <label for="login-user">اسم المستخدم أو البريد الإلكتروني</label>
+        <input id="login-user" type="text" placeholder="أدخل اسم المستخدم" autocomplete="username" required>
+        <label for="login-pass">كلمة المرور</label>
+        <input id="login-pass" type="password" placeholder="أدخل كلمة المرور" autocomplete="current-password" required>
+        <div id="login-error" class="error-msg">يرجى إدخال اسم المستخدم وكلمة المرور.</div>
+        <button class="btn btn-primary" type="submit" style="width:100%">دخول</button>
+      </form>
+    </div>
+  </div>
+
+  <header class="topbar">
+    <div class="container navbar">
+      <a class="brand" href="index.html" aria-label="العودة للصفحة الرئيسية">
+           <img src="../Image/Screenshot 2026-02-21 2.33.18 PM.png" alt="هنا كانت صوره الشعار الخاص بالموقع" width=" 60" >
+
+        <span>
+          MOSIQATI
+          <small>موسيقاتي — حيث تبدأ رحلتك الموسيقية</small>
+        </span>
+      </a>
+
+      <nav aria-label="القائمة الرئيسية">
+        <ul class="nav-links">
+          <li><a class="" href="index.html">الرئيسية</a></li>
+          <li><a class="" href="products.html">المنتجات</a></li>
+          <li><a class="" href="services.html">الخدمات</a></li>
+          <li><a class="" href="about.html">من نحن</a></li>
+          <li><a class="active" href="contact.html">تواصل معنا</a></li>
+        </ul>
+      </nav>
+
+      <div class="navbar-actions" style="display:flex;align-items:center;gap:.75rem;flex-shrink:0">
+        <div class="search-wrap">
+          <span class="search-icon" aria-hidden="true">🔍</span>
+          <input id="global-search" type="search" placeholder="ابحث..." autocomplete="off" aria-label="بحث في الموقع">
+          <div id="search-results" role="listbox" aria-label="نتائج البحث"></div>
+        </div>
+        <button class="btn-login" onclick="openLogin()" aria-label="تسجيل الدخول">🔑 دخول</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <section class="container">
+      <div class="section-head" id="top">
+        <div>
+          <h2>تواصل معنا</h2>
+          <p>
+            أرسل لنا طلبك أو استفسارك، وسنردّ عليك في أقرب وقت ممكن. نموذج التواصل مجهّز للربط بالبريد الإلكتروني لاحقاً.
+          </p>
+        </div>
+      </div>
+
+      <div class="grid grid-2">
+        <section class="card">
+          <h3>أرسل استفسارك أو طلبك</h3>
+
+          <!-- نموذج التواصل مع Autofill وتحقق فوري -->
+          <form data-contact autocomplete="on" novalidate>
+            <div class="form-grid">
+              <div>
+                <label for="name">الاسم الكامل</label>
+                <input id="name" name="name" type="text" placeholder="أدخل اسمك الكامل"
+                       autocomplete="name" required>
+              </div>
+
+              <div>
+                <label for="phone">رقم الجوال</label>
+                <input id="phone" name="phone" type="tel" placeholder="07xxxxxxxx"
+                       autocomplete="tel" pattern="07[0-9]{8}" required>
+              </div>
+
+              <div>
+                <label for="service">نوع الطلب</label>
+                <select id="service" name="service">
+                  <option>استفسار عن منتج</option>
+                  <option>طلب صيانة</option>
+                  <option>استشارة فنية</option>
+                  <option>طلب توصيل</option>
+                </select>
+              </div>
+
+              <div>
+                <label for="city">محافظتك</label>
+                <select id="city" name="city" autocomplete="address-level2">
+                  <option>عمّان</option>
+                  <option>إربد</option>
+                  <option>الزرقاء</option>
+                  <option>العقبة</option>
+                  <option>البلقاء</option>
+                  <option>مأدبا</option>
+                  <option>جرش</option>
+                  <option>عجلون</option>
+                  <option>الكرك</option>
+                  <option>الطفيلة</option>
+                  <option>معان</option>
+                  <option>المفرق</option>
+                 <option>البويضة</option>
+                </select>
+              </div>
+
+              <div class="full">
+                <label for="message">تفاصيل طلبك أو استفسارك</label>
+                <textarea id="message" name="message"
+                          placeholder="صِف لنا ما تحتاجه — نوع الآلة، المشكلة الفنية، أو تفاصيل الطلب"
+                          required></textarea>
+              </div>
+
+              <div class="full">
+                <button class="btn btn-primary" type="submit">إرسال الطلب</button>
+              </div>
+            </div>
+          </form>
+
+          <!-- رسالة النجاح بعد الإرسال -->
+          <div id="success-msg">
+            <div class="success-icon">✅</div>
+            <h3>تم إرسال طلبك بنجاح!</h3>
+            <p>شكراً لتواصلك مع موسيقاتي، سنردّ عليك في أقرب وقت ممكن.</p>
+          </div>
+        </section>
+
+        <section class="card">
+          <h3>معلومات مفيدة</h3>
+          <ul class="list-check">
+            <li>نوصّل إلى جميع محافظات الأردن بشكل آمن ومنظم</li>
+            <li>يمكنك حجز موعد صيانة أو طلب استشارة قبل الشراء</li>
+            <li>الموقع متوافق مع جميع أحجام الشاشات والهواتف</li>
+            <li>النموذج سيُربط بالبريد الإلكتروني أو قاعدة البيانات لاحقاً</li>
+          </ul>
+
+          <div class="notice">
+            أرقام الهاتف، البريد الإلكتروني، والعنوان الفعلي ستُضاف عند اكتمال البيانات الرسمية للمتجر.
+          </div>
+        </section>
+      </div>
+
+      <div class="section-head" style="margin-top:2rem">
+        <div>
+          <h2>موقعنا على الخريطة</h2>
+          <p>خريطة توضيحية مضمّنة يمكن استبدالها بعنوان المتجر الفعلي عند تحديد الموقع الرسمي.</p>
+        </div>
+      </div>
+
+      <iframe
+        class="map-frame"
+        title="خريطة موقع متجر موسيقاتي في الأردن"
+        src="https://www.google.com/maps?q=Amman%20Jordan&output=embed"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+
+      <div class="section-head" style="margin-top:2rem">
+        <div>
+          <h2>أوقات العمل و التواجد</h2>
+          <p>جدول واضح يوضّح أوقات العمل وطبيعة الخدمات المتاحة لتخطيط تواصلك معنا.</p>
+        </div>
+      </div>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>التفصيل</th>
+              <th>المعلومات</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>أوقات الدوام</td>
+              <td>جميع أيام الأسبوع | من 10 صباحاً حتى 8 مساءً — ملاحظة: الدوام يوم الجمعة يبدأ الساعة 1:00 مساءً</td>
+            </tr>
+            <tr>
+              <td>خدمة التوصيل</td>
+              <td>متاحة لجميع المحافظات وفق حجم المنتج ونوعه</td>
+            </tr>
+            <tr>
+              <td>خدمة الصيانة</td>
+              <td>يُنصح بحجز موعد مسبق عبر النموذج أو الاتصال المباشر</td>
+            </tr>
+            <tr>
+              <td>الاستشارات الفنية</td>
+              <td>استشارة أولية مجانية لاختيار الآلة أو تجهيز الاستوديو</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <section>
+        <h3>MOSIQATI | موسيقاتي</h3>
+        <p>
+          متجرك الأردني المتخصص في الآلات الموسيقية ومعدات الاستوديو،
+          مدعوماً بخدمات توصيل وصيانة واستشارات فنية، بهوية عصرية تناسب طموحك الموسيقي.
+        </p>
+        <div class="social-links">
+          <a class="social-link" href="https://www.instagram.com" target="_blank" rel="noopener" aria-label="انستجرام موسيقاتي">📸 انستجرام</a>
+          <a class="social-link" href="https://www.facebook.com" target="_blank" rel="noopener" aria-label="فيسبوك موسيقاتي">📘 فيسبوك</a>
+          <a class="social-link" href="https://www.tiktok.com" target="_blank" rel="noopener" aria-label="تيك توك موسيقاتي">🎵 تيك توك</a>
+          <a class="social-link" href="https://www.youtube.com" target="_blank" rel="noopener" aria-label="يوتيوب موسيقاتي">▶️ يوتيوب</a>
+        </div>
+      </section>
+
+      <section>
+        <h4>روابط مهمة</h4>
+        <ul class="list-check">
+          <li><a href="products.html">استعرض المنتجات</a></li>
+          <li><a href="services.html">خدماتنا</a></li>
+          <li><a href="about.html">قصتنا وهويتنا</a></li>
+          <li><a href="contact.html">راسلنا الآن</a></li>
+        </ul>
+      </section>
+
+      <section>
+        <h4>معلومات التواصل</h4>
+        <p>التوصيل لجميع محافظات الأردن</p>
+        <p>نموذج أولي قابل للتطوير في VS Code</p>
+        <p><a href="#top">العودة للأعلى ↑</a></p>
+      </section>
+      <img src="../Image/Screenshot 2026-02-21 2.33.18 PM.png" alt="شعار متجر موسيقاتي للآلات الموسيقية" width="200" loading="lazy">
+    </div>
+  </footer>
+
+  <script src="enhancements.js"></script>
+</body>
+</html>

@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>المنتجات | موسيقاتي MOSIQATI</title>
+  <meta name="description" content="تشكيلة متكاملة من الآلات الموسيقية ومعدات الاستوديو في متجر موسيقاتي.">
+  <meta name="keywords" content="عود، قيثارة، بيانو، كيبورد، درمز، استوديو، آلات موسيقية، اكسسوارات">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="../Image/Screenshot 2026-02-21 2.33.18 PM - Copy.png">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">الانتقال للمحتوى الرئيسي</a>
+
+  <!-- ══ مودال تسجيل الدخول ══ -->
+  <div id="login-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-label="تسجيل الدخول">
+    <div class="modal-box">
+      <button class="modal-close" onclick="closeLogin()" aria-label="إغلاق">✕</button>
+      <h2>🔐 تسجيل الدخول</h2>
+      <form id="login-form" autocomplete="on" novalidate>
+        <label for="login-user">اسم المستخدم أو البريد الإلكتروني</label>
+        <input id="login-user" type="text" placeholder="أدخل اسم المستخدم" autocomplete="username" required>
+        <label for="login-pass">كلمة المرور</label>
+        <input id="login-pass" type="password" placeholder="أدخل كلمة المرور" autocomplete="current-password" required>
+        <div id="login-error" class="error-msg">يرجى إدخال اسم المستخدم وكلمة المرور.</div>
+        <button class="btn btn-primary" type="submit" style="width:100%">دخول</button>
+      </form>
+    </div>
+  </div>
+
+  <header class="topbar">
+    <div class="container navbar">
+      <a class="brand" href="index.html" aria-label="العودة للصفحة الرئيسية">
+        <img src="../Image/Screenshot 2026-02-21 2.33.18 PM.png" alt="هنا كانت صوره الشعار الخاص بالموقع" width=" 60" >
+        <span>
+          MOSIQATI
+          <small>موسيقاتي — حيث تبدأ رحلتك الموسيقية</small>
+        </span>
+      </a>
+
+      <nav aria-label="القائمة الرئيسية">
+        <ul class="nav-links">
+          <li><a class="" href="index.html">الرئيسية</a></li>
+          <li><a class="active" href="products.html">المنتجات</a></li>
+          <li><a class="" href="services.html">الخدمات</a></li>
+          <li><a class="" href="about.html">من نحن</a></li>
+          <li><a class="" href="contact.html">تواصل معنا</a></li>
+        </ul>
+      </nav>
+
+      <div class="navbar-actions" style="display:flex;align-items:center;gap:.75rem;flex-shrink:0">
+        <div class="search-wrap">
+          <span class="search-icon" aria-hidden="true">🔍</span>
+          <input id="global-search" type="search" placeholder="ابحث..." autocomplete="off" aria-label="بحث في الموقع">
+          <div id="search-results" role="listbox" aria-label="نتائج البحث"></div>
+        </div>
+        <button class="btn-login" onclick="openLogin()" aria-label="تسجيل الدخول">🔑 دخول</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <section class="container">
+      <div class="section-head" id="top">
+        <div>
+          <h2>تشكيلة المنتجات</h2>
+          <p>
+            نعرض هنا الفئات الأساسية لمنتجاتنا بشكل منظم وواضح، مع إمكانية ربطها مستقبلاً بمتجر إلكتروني متكامل.
+          </p>
+        </div>
+        <div class="anchor-links">
+          <a href="#categories">الفئات</a>
+          <a href="#comparison">جدول المقارنة</a>
+          <a href="#tips">نصائح الشراء</a>
+        </div>
+      </div>
+
+      <img src="../Image/Screenshot 2026-02-21 2.32.24 PM.png"
+           alt="صورة توضح تشكيلة منتجات موسيقاتي من الآلات الموسيقية"
+           height="250" loading="lazy">
+
+      <div class="grid grid-3" id="categories">
+        <article class="card">
+          <div class="icon-dot">♪</div>
+          <h3>العود</h3>
+          <p>نماذج مختارة بعناية للطالب المبتدئ والهاوي والعازف المحترف، بأسعار تناسب الجميع.</p>
+        </article>
+
+        <article class="card">
+          <div class="icon-dot">♬</div>
+          <h3>القيثارات</h3>
+          <p>كلاسيك، أكوستك، وكهربائية مع مجموعة متكاملة من الاكسسوارات والحقائب الواقية.</p>
+        </article>
+
+        <article class="card">
+          <div class="icon-dot">♩</div>
+          <h3>البيانو والكيبورد</h3>
+          <p>خيارات للتعلّم المنزلي، التعليم الموسيقي، والأداء على المسرح والعروض الحية.</p>
+        </article>
+
+        <article class="card">
+          <div class="icon-dot">♭</div>
+          <h3>الدرمز والطبول</h3>
+          <p>أطقم كاملة وقطع مفردة مثالية للتعلّم والبروفات والأداء الاحترافي.</p>
+        </article>
+
+        <article class="card">
+          <div class="icon-dot">♫</div>
+          <h3>معدات الاستوديو</h3>
+          <p>ميكروفونات، كروت صوت، سماعات مونيتور، وحلول إنتاج صوتي متكاملة لكل بيئة تسجيل.</p>
+        </article>
+
+        <article class="card">
+          <div class="icon-dot">♯</div>
+          <h3>الاكسسوارات والملحقات</h3>
+          <p>أسلاك، حوامل، مضبطات، حقائب حماية، ومستلزمات داعمة لكل نوع من الآلات.</p>
+        </article>
+      </div>
+
+      <div class="section-head" id="comparison" style="margin-top:2rem">
+        <div>
+          <h2>جدول الفئات التفصيلي</h2>
+        </div>
+      </div>
+
+      <div class="table-wrap" aria-label="جدول تفصيلي لفئات المنتجات">
+        <table>
+          <thead>
+            <tr>
+              <th>الفئة</th>
+              <th>أمثلة على المنتجات</th>
+              <th>الجمهور المستهدف</th>
+              <th>الغرض الأساسي</th>
+              <th>ملاحظة</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>الآلات الشرقية</td>
+              <td>عود، رق، طبلة، قانون</td>
+              <td>طلاب الموسيقى ومحبو التراث</td>
+              <td>التعلم والعروض التراثية والفنية</td>
+              <td>فرصة لإبراز الهوية العربية والأردنية بشكل واضح</td>
+            </tr>
+            <tr>
+              <td>القيثارات</td>
+              <td>كلاسيك، أكوستك، كهربائية</td>
+              <td>الشباب والمبتدئون</td>
+              <td>التدريب والعزف الجماعي والترفيه</td>
+              <td>من أكثر الأقسام تناسباً مع الهوية الشبابية الجديدة</td>
+            </tr>
+            <tr>
+              <td>البيانو والكيبورد</td>
+              <td>كيبوردات تعليمية، مفاتيح مسرحية</td>
+              <td>العائلات والمعاهد الموسيقية</td>
+              <td>التعلم والتأليف الموسيقي</td>
+              <td>يستفيد كثيراً من صور جودة عالية وجداول مقارنة</td>
+            </tr>
+            <tr>
+              <td>الدرمز والطبول</td>
+              <td>طقم درمز كامل، سنير، صنجات</td>
+              <td>الفرق الموسيقية والهواة</td>
+              <td>العروض الموسيقية وجلسات التدريب</td>
+              <td>يمكن إثراؤه لاحقاً بفيديوهات توضيحية قصيرة</td>
+            </tr>
+            <tr>
+              <td>معدات الاستوديو</td>
+              <td>ميكروفون، كرت صوت، سماعات مونيتور</td>
+              <td>صناع المحتوى والمنتجون</td>
+              <td>التسجيل والمكس والإنتاج الموسيقي</td>
+              <td>قسم استراتيجي لتوسيع شريحة العملاء المستهدفة</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p class="notice">
+        تنبيه: بيانات المنتجات المعروضة هنا لأغراض التصميم الأولي، وستُستبدل ببيانات حقيقية عند إطلاق المتجر الفعلي.
+      </p>
+
+      <div class="section-head" id="tips" style="margin-top:2rem">
+        <div>
+          <h2>كيف تختار الآلة المناسبة؟</h2>
+          <p>نصائح عملية تساعدك في اتخاذ القرار الصحيح قبل الشراء، مهما كان مستواك أو ميزانيتك.</p>
+        </div>
+      </div>
+
+      <div class="grid grid-2">
+        <article class="card">
+          <h3>إذا كنت مبتدئاً</h3>
+          <ul class="list-check">
+            <li>ابدأ بآلة خفيفة وسهلة الاستخدام تناسب أسلوب حياتك.</li>
+            <li>اختر خيارات اقتصادية في البداية مع إمكانية الترقية لاحقاً.</li>
+            <li>استفد من خدمة الاستشارة المجانية قبل اتخاذ أي قرار شراء.</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h3>إذا كنت محترفاً أو صانع محتوى</h3>
+          <ul class="list-check">
+            <li>أعطِ الأولوية لجودة المواد ونقاء الصوت قبل النظر في السعر.</li>
+            <li>قارن بين الاكسسوارات المتاحة وخيارات الصيانة المتوفرة.</li>
+            <li>تواصل معنا للاطلاع على حلول الشحن الآمن داخل جميع المحافظات.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <section>
+        <h3>MOSIQATI | موسيقاتي</h3>
+        <p>
+          متجرك الأردني المتخصص في الآلات الموسيقية ومعدات الاستوديو،
+          مدعوماً بخدمات توصيل وصيانة واستشارات فنية، بهوية عصرية تناسب طموحك الموسيقي.
+        </p>
+        <div class="social-links">
+          <a class="social-link" href="https://www.instagram.com" target="_blank" rel="noopener" aria-label="انستجرام موسيقاتي">📸 انستجرام</a>
+          <a class="social-link" href="https://www.facebook.com" target="_blank" rel="noopener" aria-label="فيسبوك موسيقاتي">📘 فيسبوك</a>
+          <a class="social-link" href="https://www.tiktok.com" target="_blank" rel="noopener" aria-label="تيك توك موسيقاتي">🎵 تيك توك</a>
+          <a class="social-link" href="https://www.youtube.com" target="_blank" rel="noopener" aria-label="يوتيوب موسيقاتي">▶️ يوتيوب</a>
+        </div>
+      </section>
+
+      <section>
+        <h4>روابط مهمة</h4>
+        <ul class="list-check">
+          <li><a href="products.html">استعرض المنتجات</a></li>
+          <li><a href="services.html">خدماتنا</a></li>
+          <li><a href="about.html">قصتنا وهويتنا</a></li>
+          <li><a href="contact.html">راسلنا الآن</a></li>
+        </ul>
+      </section>
+
+      <section>
+        <h4>معلومات التواصل</h4>
+        <p>التوصيل لجميع محافظات الأردن</p>
+        <p>نموذج أولي قابل للتطوير في VS Code</p>
+        <p><a href="#top">العودة للأعلى ↑</a></p>
+      </section>
+      <img src="../Image/Screenshot 2026-02-21 2.33.18 PM.png" alt="شعار متجر موسيقاتي للآلات الموسيقية" width="200" loading="lazy">
+    </div>
+  </footer>
+
+  <script src="enhancements.js"></script>
+</body>
+</html>
